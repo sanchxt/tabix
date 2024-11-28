@@ -1,8 +1,10 @@
+import SearchBar from "./components/SearchBar";
+
 const App = () => {
   return (
-    <>
-      <div className="text-8xl text-green-400">hi</div>
-    </>
+    <main className="h-screen w-screen">
+      <SearchBar />
+    </main>
   );
 };
 
