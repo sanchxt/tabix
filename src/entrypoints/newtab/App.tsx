@@ -1,8 +1,8 @@
 import BottomBar from "./components/BottomBar";
 import CurrentTime from "./components/CurrentTime";
 import SearchBar from "./components/SearchBar";
+import WebsiteShortcuts from "./components/site-shortcuts/WebsiteShortcuts";
 import TopBar from "./components/TopBar";
-import WebsiteShortcuts from "./components/WebsiteShortcuts";
 
 const App = () => {
   return (
