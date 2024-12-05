@@ -8,6 +8,7 @@ export default defineConfig({
 
   manifest: {
     name: "some random title",
+    permissions: ["storage"],
     action: {
       default_popup: "popup.html",
     },
