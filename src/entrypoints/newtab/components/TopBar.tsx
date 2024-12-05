@@ -1,17 +1,19 @@
-import flower from "@/assets/flower.svg";
-import { HiMenuAlt1 } from "react-icons/hi";
+import flower from '@/assets/flower.svg';
+import { HiMenuAlt1 } from 'react-icons/hi';
 
 const TopBar = () => {
   return (
-    <div className="py-8 flex justify-between items-center">
+    <div className="py-4 flex justify-between items-center relative">
       <button className="text-5xl font-thin tracking-widest text-white">
         Tabix.
       </button>
 
-      <img src={flower} className="w-12 h-12" />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-2">
+        <img src={flower} className="w-12 h-12 md:w-14 md:h-14" alt="Flower" />
+      </div>
 
       <button>
-        <HiMenuAlt1 className="w-12 h-12 text-white" />
+        <HiMenuAlt1 className="w-10 h-10 md:w-12 md:h-12 text-white" />
       </button>
     </div>
   );
