@@ -1,8 +1,8 @@
 const App = () => {
   return (
-    <>
-      <div className="text-8xl">hi</div>
-    </>
+    <div className="p-8">
+      <h1>Custom New Tab Toggle</h1>
+    </div>
   );
 };
 

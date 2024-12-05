@@ -1,6 +1,5 @@
 import { defineConfig } from "wxt";
 
-// See https://wxt.dev/api/config.html
 export default defineConfig({
   extensionApi: "chrome",
   modules: ["@wxt-dev/module-react"],
@@ -9,6 +8,7 @@ export default defineConfig({
 
   manifest: {
     name: "some random title",
+    permissions: ["storage"],
     action: {
       default_popup: "popup.html",
     },

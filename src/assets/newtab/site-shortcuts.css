@@ -1,0 +1,7 @@
+.shortcut-box {
+  @apply h-24 w-24 rounded-xl text-slate-200 flex justify-center items-center;
+}
+
+.right-col-box {
+  @apply relative top-8;
+}
