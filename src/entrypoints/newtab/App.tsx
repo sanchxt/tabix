@@ -2,6 +2,7 @@ import BottomBar from "./components/BottomBar";
 import CurrentTime from "./components/CurrentTime";
 import SearchBar from "./components/SearchBar";
 import TopBar from "./components/TopBar";
+import WebsiteShortcuts from "./components/WebsiteShortcuts";
 
 const App = () => {
   return (
@@ -10,11 +11,15 @@ const App = () => {
         <TopBar />
       </section>
 
-      <section className="h-full flex justify-center items-center">
+      <section className="h-full grid grid-cols-[1fr_auto_1fr] items-center">
+        <div className="text-white">tools</div>
+
         <div className="flex justify-center items-center flex-col w-full gap-y-12">
           <CurrentTime />
           <SearchBar />
         </div>
+
+        <WebsiteShortcuts />
       </section>
 
       <section>

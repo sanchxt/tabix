@@ -71,6 +71,10 @@ const SearchBar = () => {
           <FiSearch size={20} />
         </button>
       </form>
+
+      <h3 className="text-slate-300 pt-6 font-bold italic text-lg tracking-widest">
+        what's cookin' good lookin'
+      </h3>
     </div>
   );
 };
