@@ -12,7 +12,7 @@ const ShortcutButton = ({
   return (
     <div
       className={`relative shortcut-box bg-gradient-to-b border group ${
-        isOddIndex ? "right-col-box" : ""
+        isOddIndex ? "lower-box" : ""
       } ${
         shortcut
           ? "from-purple-700/30 to-purple-100/20 border-purple-500"
@@ -32,7 +32,7 @@ const ShortcutButton = ({
             className="h-12 w-12"
           />
         ) : (
-          <GoPlus className="text-4xl text-gray-400" />
+          <GoPlus className="text-5xl text-gray-300" />
         )}
       </button>
 

@@ -5,7 +5,7 @@ import ShortcutButton from "./ShortcutButton";
 import { useShortcuts } from "../../hooks/useShortcuts";
 import { useValidateUrl } from "../../hooks/useValidateUrl";
 
-import "@/assets/newtab/site-shortcuts.css";
+import "@/assets/newtab/shortcuts.css";
 
 const WebsiteShortcuts = () => {
   const [popupIndex, setPopupIndex] = useState<number | null>(null);
