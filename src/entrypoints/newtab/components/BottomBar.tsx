@@ -1,17 +1,38 @@
 import { useState } from "react";
-import { IoIosArrowUp } from "react-icons/io";
+
 import BouncingArrow from "./BouncingArrow";
+import { Game } from "../utils/types/bottom-bar";
+import { GameA, GameB, GameC, GameD } from "./games";
+
+import "@/assets/newtab/bottom-bar.css";
+
+const games: Game[] = ["gameA", "gameB", "gameC", "gameD"];
 
 const BottomBar = () => {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
-  const [score, setScore] = useState<number>(0);
+  const [selectedGame, setSelectedGame] = useState<Game>("gameA");
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const incrementScore = () => {
-    setScore(score + 1);
+  const handleGameSelect = (game: Game) => {
+    setSelectedGame(game);
+  };
+
+  const renderGame = () => {
+    switch (selectedGame) {
+      case "gameA":
+        return <GameA />;
+      case "gameB":
+        return <GameB />;
+      case "gameC":
+        return <GameC />;
+      case "gameD":
+        return <GameD />;
+      default:
+        return <div>Choose a game!</div>;
+    }
   };
 
   return (
@@ -27,18 +48,22 @@ const BottomBar = () => {
         onMouseEnter={() => setIsExpanded(true)}
         onMouseLeave={() => setIsExpanded(false)}
       >
-        <div className="text-white text-center py-1 lg:py-4">
-          <p className="text-base lg:text-xl font-bold">* Some Game Here *</p>
-          <p className="text-lg">Your Score: {score}</p>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              incrementScore();
-            }}
-            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-          >
-            Click Me!
-          </button>
+        <div className="text-white text-center">
+          <p className="text-base lg:text-xl font-bold">{renderGame()}</p>
+        </div>
+
+        <div className="grid grid-rows-4 h-full bg-white">
+          {games.map((game, index) => (
+            <button
+              key={index}
+              className={`game-box top-[${(index + 1) * 20}%] ${
+                selectedGame === game ? "border-2 border-blue-500" : ""
+              }`}
+              onClick={() => handleGameSelect(game)}
+            >
+              {`Game ${index + 1}`}
+            </button>
+          ))}
         </div>
       </div>
     </div>
