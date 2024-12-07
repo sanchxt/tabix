@@ -56,7 +56,7 @@ const BottomBar = () => {
           {games.map((game, index) => (
             <button
               key={index}
-              className={`game-box top-[${(index + 1) * 20}%] ${
+              className={`game-box ${
                 selectedGame === game ? "border-2 border-blue-500" : ""
               }`}
               onClick={() => handleGameSelect(game)}
