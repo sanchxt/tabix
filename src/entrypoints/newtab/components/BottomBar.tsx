@@ -2,11 +2,11 @@ import { useState } from "react";
 
 import BouncingArrow from "./BouncingArrow";
 import { Game } from "../utils/types/bottom-bar";
-import { PomodoroTimer, GameB, GameC, GameD } from "./games";
+import { PomodoroTimer, SavedLinks, GameC, GameD } from "./games";
 
 import "@/assets/newtab/bottom-bar.css";
 
-const games: Game[] = ["Pomodoro", "gameB", "gameC", "gameD"];
+const games: Game[] = ["Pomodoro", "SavedLinks", "gameC", "gameD"];
 
 const BottomBar = () => {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
@@ -24,8 +24,8 @@ const BottomBar = () => {
     switch (selectedGame) {
       case "Pomodoro":
         return <PomodoroTimer />;
-      case "gameB":
-        return <GameB />;
+      case "SavedLinks":
+        return <SavedLinks />;
       case "gameC":
         return <GameC />;
       case "gameD":
