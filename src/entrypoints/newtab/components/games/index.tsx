@@ -1,6 +1,6 @@
 import PomodoroTimer from "./PomodoroTimer";
-import GameB from "./GameB";
+import SavedLinks from "./SavedLinks";
 import GameC from "./GameC";
 import GameD from "./GameD";
 
-export { PomodoroTimer, GameB, GameC, GameD };
+export { PomodoroTimer, SavedLinks, GameC, GameD };
