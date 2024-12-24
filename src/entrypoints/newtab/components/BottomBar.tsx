@@ -54,21 +54,23 @@ const BottomBar = () => {
         </div>
 
         {/* game buttons - visible only when expanded */}
-        {isExpanded && (
-          <div className="grid grid-rows-4 h-full">
-            {games.map((game, index) => (
-              <button
-                key={index}
-                className={`game-box ${
-                  selectedGame === game ? "border-2 border-blue-500" : ""
-                }`}
-                onClick={() => handleGameSelect(game)}
-              >
-                {`Tool ${index + 1}`}
-              </button>
-            ))}
-          </div>
-        )}
+        <div
+          className={`grid grid-rows-4 h-full ${
+            isExpanded ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-500`}
+        >
+          {games.map((game, index) => (
+            <button
+              key={index}
+              className={`game-box ${
+                selectedGame === game ? "border-2 border-blue-500" : ""
+              }`}
+              onClick={() => handleGameSelect(game)}
+            >
+              {`Tool ${index + 1}`}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
