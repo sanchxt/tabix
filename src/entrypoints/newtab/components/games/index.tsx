@@ -1,6 +1,6 @@
-import GameA from "./GameA";
+import PomodoroTimer from "./PomodoroTimer";
 import GameB from "./GameB";
 import GameC from "./GameC";
 import GameD from "./GameD";
 
-export { GameA, GameB, GameC, GameD };
+export { PomodoroTimer, GameB, GameC, GameD };
