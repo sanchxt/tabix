@@ -1,6 +1,6 @@
 import PomodoroTimer from "./PomodoroTimer";
 import SavedLinks from "./SavedLinks";
-import GameC from "./GameC";
+import StickyNotes from "./sticky-notes/StickyNotes";
 import GameD from "./GameD";
 
-export { PomodoroTimer, SavedLinks, GameC, GameD };
+export { PomodoroTimer, SavedLinks, StickyNotes, GameD };
