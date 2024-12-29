@@ -3,4 +3,4 @@ export interface ArrowProps {
   toggleExpand: () => void;
 }
 
-export type Game = "Pomodoro" | "SavedLinks" | "gameC" | "gameD";
+export type Game = "Pomodoro" | "SavedLinks" | "StickyNotes" | "gameD";
